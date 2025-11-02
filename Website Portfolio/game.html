@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Flappy Bird Clone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            margin: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+            color: #111;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .accent-triangle.blue {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 60px 60px 0 0;
+            border-color: #b3c4d1 transparent transparent transparent;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: -1;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+            /* meer top-align */
+        }
+
+        .text-block {
+            max-width: 400px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            z-index: 10;
+        }
+
+        .text-block strong {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        a {
+            color: #cc6699;
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .game-image {
+            max-width: 600px;
+            max-height: 300px;
+            border-radius: 4px;
+            background: #c0c4c8;
+            padding: 0.5rem;
+            object-fit: contain;
+            /* naar rechts verplaatst zodat link zichtbaar blijft */
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accent-triangle blue"></div>
+    <h1>Game</h1>
+    <div class="flex-row">
+        <div class="text-block">
+            <p>Voor een opdracht van Creative Technology heb ik een Flappy Bird Clone gemaakt, waarin de speler een heks
+                is, die in een behekste bos terecht is gekomen en nu veilig eruit moet zien te komen. Ik heb de sprites
+                van de heks zelf getekend in MS Paint en de rest zijn assets die ik van internet heb gehaald.</p>
+            <strong>Link naar gameplay:</strong>
+            <a href="https://mymedia.avans.nl/media/CT%202%20Unity%20Video/0_9q2flcjs" target="_blank"
+                rel="noopener noreferrer">
+                https://mymedia.avans.nl/media/CT%202%20Unity%20Video/0_9q2flcjs
+            </a>
+        </div>
+        <img src="images/Game screenshot.png" alt="Screenshot Flappy Bird Clone" class="game-image" />
+    </div>
+</body>
+
+</html>

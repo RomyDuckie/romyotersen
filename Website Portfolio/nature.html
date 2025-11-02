@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nature Rocks</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            margin: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+            color: #111;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .accent-triangle.pink {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 60px 0 0 60px;
+            border-color: transparent transparent transparent rgba(230, 169, 199, 0.3);
+            position: absolute;
+            top: 40px;
+            left: 15px;
+            z-index: -1;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Aangepast: volledige afbeelding tonen, geen object-fit cover maar contain */
+        .flex-row img {
+            max-height: 220px;
+            border-radius: 4px;
+            object-fit: contain;
+            /* aangepast */
+            background: #c0c4c8;
+            padding: 0.3rem;
+            flex: 1;
+        }
+
+        .main-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            background: #c0c4c8;
+            padding: 0.5rem;
+        }
+
+        .text-block {
+            max-width: 400px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-right: 1.5rem;
+        }
+
+        .content-row {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nature Rocks</h1>
+        <div class="content-row">
+            <div class="text-block">
+                <p>Voor deze opdracht moest ik een onconventioneel medium verzinnen waarmee ik de enorme verstedelijking
+                    van Tilburg aankaart en bewoners motiveer de stad te vergroenen. Nature Rocks is een installatie,
+                    waar alles van steen is gemaakt, maar er staan stenen in de vorm van bomen, bloemen, etc. De
+                    installatie bootst dus de natuur na. Bezoekers kunnen met graffiti of verf de installatie dan verven
+                    om het kleur te geven. Ik heb een prototype gemaakt van klei en dat geverft. Ook heb ik wat key
+                    visuals gemaakt die de installatie moeten promoten.</p>
+            </div>
+            <img src="images/Stenen prototype van klei.png" alt="Nature Rocks prototype" class="main-image" />
+        </div>
+
+        <div class="flex-row">
+            <img src="images/Tekening Graffitibus.jpg" alt="Visual 1 Nature Rocks" />
+            <img src="images/Meisje schildert stenen bloemetje.png" alt="Visual 2 Nature Rocks" />
+            <img src="images/Schets stenen prototype.png" alt="Visual 3 Nature Rocks" />
+        </div>
+
+        <div class="accent-triangle pink"></div>
+    </div>
+</body>
+
+</html>

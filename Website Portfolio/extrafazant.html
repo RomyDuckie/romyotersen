@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opdrachtgever Extrafazant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            margin: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+            color: #111;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Opdrachtgever Extrafazant in samenwerking met Veilig Thuis</h1>
+    <p>Voor Extrafazant heb ik samen met een klein groepje medestudenten een concept uitgewerkt voor Veilig Thuis.
+        Het concept bestaat uit meerdere concepten voor in verschillende contexten wat samenhangt onder een kapstok met
+        telkens dezelfde boodschap: Herken jij de Redflags? Ik heb een concept uitgewerkt voor in de bioscoop. Het is
+        een
+        animatie waarin we het perspectief van een meisje volgen die op bezoek is bij een vriend van haar. De vader van
+        het jongetje komt thuis en in een flashback van het meisje krijgen we te zien dat ze leeft met huiselijk geweld.
+        Het meisje is bang dat de hetzelfde gaat gebeuren met de moeder van het jongetje, omdat dit voor haar normaal
+        is.
+        Met geluid en close-ups word er spanning opgebouwd. Uiteindelijk is er een twist in het verhaal. De vader is
+        niet
+        boos en groet de familie met een knuffel. Dit laat het meisje versteld staan. Hiermee willen we specifiek het
+        doelgroep slachtoffer mee aanspreken. Omdat zij in deze situatie leven kan het voor hun uiteindelijk als normaal
+        gaan aanvoelen, maar we willen hiermee laten zien dat het dus niet normaal is.</p>
+
+    <div class="image-container">
+        <img id="slideshow" src="images/Still 1 Collectief 5.png" alt="Still uit de Extrafazant animatie" />
+    </div>
+
+    <script>
+        // Array met alle 9 stills voor de slideshow
+        const images = [
+            'images/Still1_Collectief5.png',
+            'images/Still2_Collectief5.png',
+            'images/Still3_Collectief5.png',
+            'images/Still4_Collectief5.png',
+            'images/Still5_Collectief5.png',
+            'images/Still6_Collectief5.png',
+            'images/Still7_Collectief5.png',
+            'images/Still8_Collectief5.png',
+            'images/Still9_Collectief5.png'
+        ];
+
+        let currentIndex = 0;
+        const slideshowImage = document.getElementById('slideshow');
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            slideshowImage.src = images[currentIndex];
+        }
+
+        // Wissel elke 4 seconden naar volgende afbeelding
+        setInterval(changeImage, 4000);
+    </script>
+</body>
+
+</html>

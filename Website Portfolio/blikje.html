@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Identiteit ontwerpen voor een blikje</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            margin: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+            color: #111;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .flex-row img {
+            max-width: 48%;
+            border-radius: 4px;
+            background: #c0c4c8;
+            padding: 1rem;
+        }
+
+        .main-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .text-block {
+            max-width: 350px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-left: 1rem;
+        }
+
+        /* Accent shapes */
+        .accent-triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+        }
+
+        .accent-triangle.blue {
+            border-width: 0 20px 20px 0;
+            border-color: transparent #b3c4d1 transparent transparent;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .accent-triangle.pink {
+            border-width: 0 0 60px 30px;
+            border-color: transparent transparent rgba(230, 169, 199, 0.3) transparent;
+            position: absolute;
+            bottom: 2rem;
+            right: 1rem;
+        }
+
+        .container {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accent-triangle blue"></div>
+        <h1>Identiteit ontwerpen voor een blikje</h1>
+
+        <div class="flex-row">
+            <img src="images/Blikjes mockup.png" alt="Blikje ontwerp voorkant" />
+            <img src="images/Flyer voorkant mockup.png" alt="Flyer voorkant" />
+        </div>
+
+        <img src="images/Flyer achterkant mockup.png" alt="Flyer achterkant" class="main-image" />
+
+        <div class="text-block">
+            <p>Ik moest een etiket verzinnen voor een waarde die ik wilde uitstralen en daarbij ook een doelgroep die ik
+                wilde aanspreken. Ik had gekozen voor de waarde nostalgisch en doelgroep jong volwassenen. Dit werk past
+                bij mij, omdat ik bezig ben geweest met het visualiseren van een stijl die ik leuk vind en hoe ik dat
+                consistent kon houden en toch kon differentiëren met de etiket en flyer. Ik heb dit werk gemaakt in
+                Illustrator, dus het is vooral digitaal werk, maar er zijn wat tekeningen in de poster die ik zelf heb
+                getekend op papier en in Illustrator heb omgezet naar vectoren.</p>
+        </div>
+        <div class="accent-triangle pink"></div>
+    </div>
+</body>
+
+</html>

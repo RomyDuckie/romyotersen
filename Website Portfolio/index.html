@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Romy Otersen Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+            color: #111;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex-grow: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem 1rem;
+        }
+
+        /* Cover bovenaan met naam en portfolio */
+        #cover {
+            text-align: center;
+            margin: 2rem 0 3rem 0;
+        }
+
+        #cover h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        #cover h2 {
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: #e6a9c7;
+        }
+
+        #cover-photo {
+            max-width: 180px;
+            /* aangepast */
+            margin: 1.5rem auto 0 auto;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        #cover-photo img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Menu sectie in midden van pagina */
+        #menu-section {
+            height: 250px;
+            /* hoogte menu sectie */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        #menu-section nav {
+            display: flex;
+            gap: 4rem;
+        }
+
+        #menu-section nav a {
+            font-weight: 700;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #cc6699;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #menu-section nav a:hover {
+            color: #e6a9c7;
+        }
+
+        #menu-section nav a.active {
+            color: #cc6699;
+            border-bottom: 3px solid #cc6699;
+            padding-bottom: 4px;
+        }
+
+        /* Projecten sectie */
+        #projecten {
+            display: none;
+        }
+
+        #projecten.active {
+            display: block;
+        }
+
+        #projecten .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        /* Container voor elk plaatje met vaste hoogte */
+        #projecten .grid .img-container {
+            width: 100%;
+            height: 200px;
+            /* vaste hoogte, pas aan naar wens */
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        #projecten .grid .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: block;
+        }
+
+        #projecten .grid .img-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Over Mij sectie */
+        #overmij {
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+            display: none;
+        }
+
+        #overmij.active {
+            display: block;
+        }
+
+        #overmij p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* E-mail sectie styling */
+        .email-section {
+            max-width: 700px;
+            margin: 2rem auto 3rem auto;
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .email-section a {
+            color: #e6a9c7;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .email-section a:hover {
+            color: #cc6699;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            #projecten .grid {
+                grid-template-columns: 1fr;
+            }
+
+            #menu-section {
+                height: 180px;
+            }
+
+            #menu-section nav {
+                gap: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Cover met naam, portfolio en foto -->
+        <section id="cover">
+            <h1>Romy Otersen</h1>
+            <h2>PORTFOLIO</h2>
+            <div id="cover-photo">
+                <img src="images/Foto van mezelf.png" alt="Foto van Romy Otersen" />
+            </div>
+        </section>
+
+        <!-- Horizontaal en verticaal gecentreerde menu sectie -->
+        <section id="menu-section" role="navigation" aria-label="Hoofdmenu">
+            <nav>
+                <a href="#" id="menu-projecten" class="active">Projecten</a>
+                <a href="#" id="menu-overmij">Over Mij</a>
+            </nav>
+        </section>
+
+        <!-- Projecten sectie -->
+        <section id="projecten" class="active" aria-label="Projecten overzicht">
+            <div class="grid">
+                <div class="img-container">
+                    <img src="images/Blikjes mockup.png" alt="Identiteit ontwerpen voor een blikje"
+                        data-page="blikje.html" />
+                </div>
+                <div class="img-container">
+                    <img src="images/Stenen prototype van klei.png" alt="Nature Rocks installatie"
+                        data-page="nature.html" />
+                </div>
+                <div class="img-container">
+                    <img src="images/Game screenshot.png" alt="Game Flappy Bird Clone" data-page="game.html" />
+                </div>
+                <div class="img-container">
+                    <img src="images/Discursive Design tekening.jpg" alt="Discursive Design - toeristen bij molens"
+                        data-page="discursive.html" />
+                </div>
+                <div class="img-container">
+                    <img src="images/Still1_Collectief5.png" alt="Extra Fazant animatie - meisje en meisje in kamer"
+                        data-page="extrafazant.html" />
+                </div>
+            </div>
+            <div id="contact-projecten" class="email-section">
+                Email<br />
+                <a href="mailto:Romyotersen92@gmail.com" target="_blank"
+                    rel="noopener noreferrer">Romyotersen92@gmail.com</a>
+            </div>
+        </section>
+
+        <!-- Over Mij sectie -->
+        <section id="overmij" aria-label="Over mij informatie">
+            <h2>Over Mij</h2>
+            <p>Als ontwerper hou ik van visualiseren. Ik wil ontwerpen maken die mensen entertainen, maar ook een
+                bijdrage brengen aan deze wereld. Mijn interesses liggen vooral bij Media Design, Spatial &amp;
+                Sensorial en Creative Technology. Ik hou ervan om te tekenen dus vindt ik het fijn als ik dat kan
+                terugbrengen in het ontwerpen. Door mijn CMD opleiding heb ik ook kennis kunnen maken met andere
+                ontwerpmethodes, zoals Social Design, Discursive Design en UXD.</p>
+            <div id="contact-overmij" class="email-section">
+                Email<br />
+                <a href="mailto:Romyotersen92@gmail.com" target="_blank"
+                    rel="noopener noreferrer">Romyotersen92@gmail.com</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuProjecten = document.getElementById('menu-projecten');
+        const menuOvermij = document.getElementById('menu-overmij');
+        const sectieProjecten = document.getElementById('projecten');
+        const sectieOvermij = document.getElementById('overmij');
+
+        menuProjecten.addEventListener('click', e => {
+            e.preventDefault();
+            sectieProjecten.classList.add('active');
+            sectieOvermij.classList.remove('active');
+            menuProjecten.classList.add('active');
+            menuOvermij.classList.remove('active');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        menuOvermij.addEventListener('click', e => {
+            e.preventDefault();
+            sectieProjecten.classList.remove('active');
+            sectieOvermij.classList.add('active');
+            menuOvermij.classList.add('active');
+            menuProjecten.classList.remove('active');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Klik op project afbeelding opent nieuwe pagina
+        document.querySelectorAll('#projecten img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                const page = img.dataset.page;
+                if (page) {
+                    window.location.href = page;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
